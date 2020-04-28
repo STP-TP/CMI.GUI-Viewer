@@ -20,11 +20,13 @@ class GuiWindow(QWidget):
         self.set_menu_button(menu_list)
         self.tab_widget.select_menu_button(0)
 
+        self.btn_layout.addStretch(2)
         for cnt in range(self.__widget_num):
             self.btn_layout.addWidget(self.btn_menu[cnt])
+        self.btn_layout.addStretch(2)
 
         self.screen_layout.addWidget(self.btn_widget, 1)
-        self.screen_layout.addWidget(self.tab_widget, 4)
+        self.screen_layout.addWidget(self.tab_widget, 9)
 
         self.setLayout(self.screen_layout)
 

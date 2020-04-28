@@ -22,5 +22,3 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     win_gui = CmiGui()
     app.exec()
-
-# test
