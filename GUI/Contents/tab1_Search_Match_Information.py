@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import *
 from PyQt5.Qt import *
+import urllib.request as socket
 
 
 class Tab1(QGroupBox):
@@ -48,7 +49,10 @@ class Tab1(QGroupBox):
         self.layout.addWidget(self.main_view, 14)
 
     def btn_search_clicked(self):
-        pass
+        url = "http://localhost/analysis/PPIE/"
+        response = socket.urlopen(url)
+        res_code = response.getcode()
+        response_body = response.read().decode('utf-8')
 
     def radio_clicked(self):
         if self.radio_normal.isChecked():
